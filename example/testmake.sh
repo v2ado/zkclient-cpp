@@ -1,1 +1,3 @@
-gcc -o test test.cpp  ../lib/libzkclient.a -I zookeeper-3.4.6/src/c/include/   -I appzkclient/ -lboost_thread-mt -lboost_date_time -lthrift  -l zookeeper_mt -lpthread 
+gcc -o test test.cpp  ../libzkclient.a -I/usr/local/include/zookeeper -I../  -I../inc -lboost_thread -lboost_date_time -lzookeeper_mt -lpthread 
+gcc -o zktest zktest.cpp  ../libzkclient.a -I/usr/local/include/zookeeper -I../  -I../inc -lboost_thread -lboost_date_time -lzookeeper_mt -lpthread 
+gcc -o zktest2 zktest2.cpp  ../libzkclient.a -I/usr/local/include/zookeeper -I../  -I../inc -lboost_thread -lboost_date_time -lzookeeper_mt -lpthread 

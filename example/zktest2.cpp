@@ -11,10 +11,12 @@ int main()
 	string serstring("192.168.1.226:2181");
 	string cname("cms");
 	string addr("dqc@192.168.1.226:10001");
-	ZkAccept cmsZR(cname,addr,serstring);
+    long int ver = 1;
+
+	ZkAccept cmsZR(cname,addr,serstring,ver);
 	cmsZR.serRegister();
 	sleep(1);
-	ZkRequest puZR(cname,serstring);
+	ZkRequest puZR(cname,serstring,ver);
 	puZR.discovery();
 
 	string IP;
